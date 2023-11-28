@@ -22,11 +22,11 @@ let userChoice = prompt(`Digita "pari" o "dispari"`);
 
 // CONTROLLO CHE L'UTENTE ABBIA INSERITO PARI O DISPARI 
 
-// if(userChoice != "pari", "dispari"){
-//     alert(`Devi inserire soltanto "pari" o "dispari", prova di nuovo`)
-// }
+while(userChoice != "pari" && userChoice != "dispari"){
+    alert(`Devi inserire soltanto "pari" o "dispari", prova di nuovo`)
+    userChoice = prompt(`Digita "pari" o "dispari"`);
+}
 
-// IL CONTROLLO PARI O DISPARI SI BUGGA
 
 // UTENTE SCEGLIE UN NUMERO DA 1 a 5
 
@@ -48,15 +48,16 @@ console.log(sum)
 
 let result = evenOdd(sum);
 
+
 if(result && userChoice == "pari"){
     alert(`Hai vinto! il tuo numero è ${userNum}, il numero del computer è ${com}. La somma è ${sum} e la tua scelta è stata ${userChoice}`)
 }
 else if(result && userChoice == "dispari"){
     alert(`Hai perso! il tuo numero è ${userNum}, il numero del computer è ${com}. La somma è ${sum} e la tua scelta è stata ${userChoice} `)
 }
-else if(result = false && userChoice == "dispari"){
+else if(result == false && userChoice == "dispari"){
     alert(`Hai vinto! il tuo numero è ${userNum}, il numero del computer è ${com}. La somma è ${sum} e la tua scelta è stata ${userChoice}`)
 }
-else if(result = false && userChoice == "pari"){
+else if(result == false && userChoice == "pari"){
     alert(`Hai perso! il tuo numero è ${userNum}, il numero del computer è ${com}. La somma è ${sum} e la tua scelta è stata ${userChoice} `)
 }

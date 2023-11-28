@@ -11,7 +11,11 @@ function palindroma(word){
 }
 
 // PERMETTO ALL'UTENTE DI INSERIRE LA SUA PAROLA PER EFFETTUARE IL CONTROLLO
-let userText = prompt(`Inserisci una parola`)
+let userText = prompt(`Inserisci una parola`);
+while(userText.split(` `).length > 1){
+    alert(`Devi inserire soltanto una parola!`)
+    userText = prompt(`Inserisci una parola`)
+}
 
 // RICHIAMO LA FUNZIONE DEFINITA IN PRECEDENZA
 palindroma(userText);
